@@ -129,7 +129,7 @@ def main():
                 continue
             DefaultSensor.print_message(status)
         except ValueError:
-            print("Invalid input type. Please enter an integer (0, 1, 2, or 3).")
+            print("Invalid input type. Please enter an integer 0, 1, 2, or 3!")
 
 
 
