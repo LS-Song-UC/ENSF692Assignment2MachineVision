@@ -13,9 +13,7 @@ This function prompts the user for and option out of 3 categories of status upda
 There are built-in handling procedures for invalid/unexpected input types/values, wherein the program will re-direct the user back to the beginning menu.
 Once a status has been updated, the function will print out the current recorded status of the object of class Sensor, as well as give a recommended course of action based on the current status.
 Note: the recommendation is given based on the entire range of attributes currently stored inside the object, for instance, if a user updates Vehicle status from True to False,
-but legacy input for other attributes prevent affirmative action such as Pedestrian still being stored as "True", the function will
-# "Evaluate", then inform the user to "STOP!" even if the last updated status changed to encourage affirmative action.
-In other words, when and only when all 3 attributes allow the user to proceed or proceed with caution, will the function output the corresponding statement.
+but legacy input for other attributes prevent affirmative action such as Pedestrian still being stored as "True", the function will "evaluate", then inform the user to "STOP!" even if the last updated status changed to encourage affirmative action. In other words, when and only when all 3 attributes allow the user to proceed or proceed with caution, will the function output the corresponding statement.
 
 
 ## Execution and Testing
