@@ -17,5 +17,6 @@ but legacy input for other attributes prevent affirmative action such as Pedestr
 
 
 ## Execution and Testing
+![Example Error Handling](ErrorHandling.png)
 ![Successful execution input_processing.py](ExampleOutput1.png)
 ![Successful execution input_processing.py](ExampleOutput2.png)
