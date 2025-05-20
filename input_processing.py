@@ -44,21 +44,21 @@ class Sensor:
                 
                 if Status == 1:
                     Light = input("What color is the traffic light displaying? You may enter 'Red', 'Yellow', or 'Green'.")
-                    if (Light != 'Red') & (Light !='Green') & (Light != 'Yellow'):
-                        print("Invalid input! Please enter 'Red' or 'Green'.")
+                    if (Light.lower() != 'red') and (Light.lower() !='green') and (Light.lower() != 'yellow'):
+                        print("Invalid input! Please enter 'Red','Green', or 'Yellow'.")
                         continue
-                    if Light == 'Red':
+                    if Light.lower() == 'red':
                         Warningmessage = True
                         print("STOP!")
                         Light = 'Red'
                         self.update_status(Light, Pedestrian, Vehicle)
                         break
-                    elif Light =='Green':
+                    elif Light.lower() =='green':
                         print("Evaluating...")
                         Light = 'Green'
                         self.update_status(Light, Pedestrian, Vehicle)
                         break
-                    elif Light =='Yellow':
+                    elif Light.lower() =='yellow':
                         print("Caution, Evaluating...")
                         Light = 'Yellow'
                         self.update_status(Light, Pedestrian, Vehicle)
@@ -68,13 +68,13 @@ class Sensor:
             
                 elif Status == 2:
                         Pedestrian = input("Are there pedestrians detected? 'Yes' or 'No'")
-                        if Pedestrian == 'Yes':
+                        if Pedestrian.lower() == 'yes':
                             Warningmessage = True
                             print("STOP!")
                             Pedestrian = True
                             self.update_status(Light, Pedestrian, Vehicle)
                             break
-                        elif Pedestrian == 'No':
+                        elif Pedestrian.lower() == 'no':
                             print("Evaluating...")
                             Pedestrian = False
                             self.update_status(Light, Pedestrian, Vehicle)
@@ -84,12 +84,13 @@ class Sensor:
                             continue
                 elif Status == 3:
                         Vehicle = input("Are there any vehicles detected? 'Yes' or 'No'")
-                        if Vehicle == 'Yes':
+                        if Vehicle.lower() == 'yes':
+                            Vehicle = True
                             Warningmessage = True
                             print("STOP!")
                             self.update_status(Light, Pedestrian, Vehicle)
                             break
-                        elif Vehicle == 'No':
+                        elif Vehicle.lower() == 'no':
                             print("Evaluating...")
                             Vehicle = False
                             self.update_status(Light, Pedestrian, Vehicle)
@@ -130,8 +131,6 @@ def main():
             DefaultSensor.print_message(status)
         except ValueError:
             print("Invalid input type. Please enter an integer 0, 1, 2, or 3!")
-
-
 
 if __name__ == '__main__':
     main()
